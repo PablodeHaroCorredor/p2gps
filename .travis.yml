@@ -10,7 +10,7 @@ script:
   - ./gradlew build
 
 after_success:
-  - cp $TRAVIS_BUILD_DIR/src/Clients/libs/*.war $TRAVIS_BUILD_DIR/deploy/docker/Clients/drop/
+  - cp $TRAVIS_BUILD_DIR/src/Clients/build/libs/*.war $TRAVIS_BUILD_DIR/deploy/docker/Clients/drop/
   - docker login -u $DOCKER_USER -p $DOCKER_PASS
   - esport REPO=p1gps
   - export TAG=web
