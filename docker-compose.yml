@@ -16,7 +16,7 @@ services:
     - "28017:28017"
     - "27017:27017"
    volumes:
-    - "db-data_/data/db"
+    - "db-data:/data/db"
  order:
    image: pablodeharo/p1gps:order
    depends_on:
